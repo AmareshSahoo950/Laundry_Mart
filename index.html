@@ -80,10 +80,11 @@
                 Dry Cleaning
                 <i class="fa-solid fa-circle"></i>
                 <span>
-                  <i class="fa-solid fa-indian-rupee-sign"></i>200.00
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  200.00
                 </span>
               </p>
-              <button class="add-items">
+              <button id="dry-cleaning-1" class="add-items-button">
                 Add Item
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
@@ -95,10 +96,11 @@
                 Wash & Fold
                 <i class="fa-solid fa-circle"></i>
                 <span>
-                  <i class="fa-solid fa-indian-rupee-sign"></i>100.00
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  100.00
                 </span>
               </p>
-              <button class="add-items">
+              <button id="wash-and-fold-2" class="add-items-button">
                 Add Item
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
@@ -110,10 +112,11 @@
                 Ironing
                 <i class="fa-solid fa-circle"></i>
                 <span>
-                  <i class="fa-solid fa-indian-rupee-sign"></i>30.00
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  30.00
                 </span>
               </p>
-              <button class="add-items">
+              <button id="ironing-3" class="add-items-button">
                 Add Item
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
@@ -125,10 +128,11 @@
                 Stain Removal
                 <i class="fa-solid fa-circle"></i>
                 <span>
-                  <i class="fa-solid fa-indian-rupee-sign"></i>500.00
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  500.00
                 </span>
               </p>
-              <button class="add-items">
+              <button id="stain-removal-4" class="add-items-button">
                 Add Item
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
@@ -140,10 +144,11 @@
                 Leather & Suede Cleaning
                 <i class="fa-solid fa-circle"></i>
                 <span>
-                  <i class="fa-solid fa-indian-rupee-sign"></i>999.00
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  999.00
                 </span>
               </p>
-              <button class="add-items">
+              <button id="leather-and-suede-cleaning-5" class="add-items-button">
                 Add Item
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
@@ -152,9 +157,16 @@
               <p class="service-name">
                 <img class="service-images" src="assets/wedding gown.png" alt=".">
                 Wedding Dress Cleaning
-                <i class="fa-solid fa-circle"></i><span><i class="fa-solid fa-indian-rupee-sign"></i>2800.00</span>
+                <i class="fa-solid fa-circle"></i>
+                <span>
+                  <i class="fa-solid fa-indian-rupee-sign"></i>
+                  2800.00
+                </span>
               </p>
-              <button class="add-items">Add Item <i class="fa-solid fa-circle-plus"></i> </button>
+              <button id="wedding-dress-cleaning-6" class="add-items-button">
+                Add Item
+                <i class="fa-solid fa-circle-plus"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -165,60 +177,84 @@
         </p>
       </div>
 
-
       <div class="right-section">
         <div class="added-items-cart">
           <p class="title">Added items</p>
-          <table>
-            <thead>
-              <tr>
-                <th>S.No</th>
-                <th>Service Name</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="item-sno"></td>
-                <td class="item-service-name"></td>
-                <td class="item-price"></td>
-              </tr>
-            </tbody>
 
-
-          </table>
+          <div class="thead-section">
+            <table>
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Service Name</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
           <hr>
+
+          <div class="tbody-section">
+            <table>
+              <tbody>
+                <div class="empty-cart-section-active">
+                  <div class="i-logo">
+                    <i class="fa-solid fa-circle-info"></i>
+                  </div>
+                  <div id="empty-message">No Items Added</div>
+                  <p id="empty-instructions">Add Items to the cart from the services bar</p>
+                </div>
+              </tbody>
+            </table>
+          </div>
+
+          <hr>
+
           <div class="total-amount">
-            <p>Total Amount</p>
-            <p>230</p>
+            <p id="title">Total Amount</p>
+            <p id="price">
+              <i class="fa-solid fa-indian-rupee-sign fa-sm"></i>
+              <span>0</span>
+            </p>
           </div>
         </div>
 
         <div class="book-now-section">
-          <strong class="book-now">Book Now</strong>
+          <strong class="book-now-title">Book Now</strong>
+
           <form action="">
             <div class="name">
+              <label for="fullName">Full Name</label><br>
+              <input id="fullName" type="text" placeholder="JohnDoe" required>
             </div>
-            <label for="fullName">Full Name</label><br>
-            <input id="fullName" type="text" placeholder="JohnDoe">
-
 
             <div class="email-phone">
-              <label for="emailID">Email ID</label><br>
-              <input id="emailID" type="text" placeholder="mailid@gmail.com">
-
-              <label for="phoneNumber">Phone Number</label><br>
-              <input id="phoneNumber" type="text" placeholder="000000000">
+              <div class="email-box">
+                <label for="emailID">Email ID</label><br>
+                <input id="emailID" type="text" placeholder="mailid@gmail.com" required>
+              </div>
+              <div class="phone-box">
+                <label for="phoneNumber">Phone Number</label><br>
+                <input id="phoneNumber" type="text" placeholder="000000000" required>
+              </div>
             </div>
+            <input type='submit' class="book-now-non-active" value="Book Now">
           </form>
 
-          <button class="book-now">Book now</button>
+
+          <div class="warning-not-active"><i class="fa-solid fa-circle-info fa-sm"></i><span>Add the items to the cart
+              to
+              book</span></div>
+          <div class="email-not-sent"><i class="fa-solid fa-circle-info fa-sm"></i><span>Email has been sent
+              successfully</span></div>
         </div>
       </div>
 
     </section>
 
   </main>
+  <script src="script/index.js"></script>
+  <script src="script/add-items.js"></script>
 </body>
 
 </html>
