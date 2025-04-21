@@ -1,6 +1,5 @@
 
 const addButtons = document.querySelectorAll('.add-items-button');
-const removeButtons = document.querySelectorAll('.remove-items-button');
 const tbody = document.querySelector('tbody');
 const tbodySection = document.querySelector('.tbody-section');
 
@@ -25,42 +24,36 @@ let serviceList = [
 ]
 
 let cart = [];
-let sno = 1, sum = 0;
+
 
 checkEmptyCart();
 
 function checkEmptyCart() {
+
   if (cart.length === 0) {
     emptyCartSection.classList.add('empty-cart-section-active');
     emptyCartSection.classList.remove('empty-cart-section-not-active');
     tbodySection.style.overflow = 'hidden';
 
     inputTagsEnabler();
-
     bookNowButtonsEnabler();
-
 
   } else {
 
     inputTags.forEach((inp) => {
       inp.addEventListener('click', () => {
         inp.disabled = false;
+        inp.focus();
       })
     })
-
-    warning.classList.remove('warning-active');
-    warning.classList.add('warning-not-active');
 
     emptyCartSection.classList.add('empty-cart-section-not-active');
     emptyCartSection.classList.remove('empty-cart-section-active');
     tbodySection.style.overflow = 'auto';
 
     inputTagsEnabler();
-
-    bookNowButton.classList.remove('book-now-non-active')
-    bookNowButton.classList.add('book-now-active')
-
     bookNowButtonsEnabler();
+
   }
 
 }
@@ -76,7 +69,6 @@ function inputTagsEnabler() {
     })
   }
   else {
-
     inputTags.forEach((inp) => {
       inp.disabled = false;
       inp.addEventListener('click', () => {
@@ -85,18 +77,28 @@ function inputTagsEnabler() {
         warning.classList.add('warning-not-active');
       })
     });
+
+    warning.classList.remove('warning-active');
+    warning.classList.add('warning-not-active');
   }
 }
 
 
 function bookNowButtonsEnabler() {
   if (cart.length === 0) {
+
+    bookNowButton.classList.add('book-now-non-active')
+    bookNowButton.classList.remove('book-now-active')
+
     bookNowButton.addEventListener('click', () => {
       warning.classList.add('warning-active');
       warning.classList.remove('warning-not-active');
     })
   }
   else {
+    bookNowButton.classList.remove('book-now-non-active')
+    bookNowButton.classList.add('book-now-active')
+
     bookNowButton.addEventListener('click', () => {
       warning.classList.add('warning-not-active');
       warning.classList.remove('warning-active');
@@ -104,43 +106,66 @@ function bookNowButtonsEnabler() {
   }
 }
 
+function totalAmountSetter() {
+  let sum = 0;
+  cart.forEach(service => {
+    sum += service.price;
+  });
 
+  return sum;
+}
 
-addButtons.forEach(e => e.addEventListener('click', () => {
+//add items
+addButtons.forEach(btn =>
+  btn.addEventListener('click', () => {
 
-  if (e.innerText.includes('Add')) {
+    const service = serviceList.find(s => s.id === btn.id)
 
-    e.innerHTML = `Remove Item <i class="fa-solid fa-circle-minus fa-sm"></i>`
-    e.classList.add('remove-items-button');
-
-    serviceList.forEach((service) => {
-      if (e.id === service.id) {
+    //Add Items to the cart
+    if (btn.innerText.includes('Add')) {
+      if (!cart.some(e => e.id === btn.id)) {
         cart.push(service);
-
-        checkEmptyCart();
-        bookNowButtonsEnabler();
-        inputTagsEnabler();
-
-        tbody.innerHTML += `
-          <tr>
-          <td class="item-sno">${sno++}</td>
-          <td class="item-service-name">${service.name}</td>
-          <td class="item-price"><i class="fa-solid fa-indian-rupee-sign fa-sm"></i>${service.price}</td>
-          </tr>
-          `;
-
-        sum += service.price;
-        totalAmount.innerText = sum;
+        btn.innerHTML = `Remove Item <i class="fa-solid fa-circle-minus fa-sm"></i>`
+        btn.classList.add('remove-items-button');
       }
-    });
+    }
+
+    //Remove item from the cart
+    else {
+      let dummyCart = [...cart];
+      cart = dummyCart.filter(ele => ele.id !== btn.id);
+
+
+      btn.innerHTML = `Add Item <i class="fa-solid fa-circle-plus"></i>`
+      btn.classList.add('add-items-button');
+      btn.classList.remove('remove-items-button');
+    }
+
+    updateCart();
+    checkEmptyCart();
+
   }
+  ));
 
-}));
 
-// addButtons.forEach(btn => {
+function updateCart() {
 
-  
-// })
+  tbody.innerHTML = ``;
+  cart.forEach(service => {
+    console.log(service);
+    
+    const row = document.createElement("tr");
+    row.innerHTML = `
+    <td class="item-sno">${cart.indexOf(service) + 1}</td>
+    <td class="item-service-name">${service.name}</td>
+    <td class="item-price"><i class="fa-solid fa-indian-rupee-sign fa-sm"></i>${service.price}</td>
+    `;
+    tbody.appendChild(row);
+  })
+
+  totalAmount.innerText = totalAmountSetter();
+}
+
 
 
 

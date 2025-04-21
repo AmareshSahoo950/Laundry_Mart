@@ -126,7 +126,7 @@
               <p class="service-name">
                 <img class="service-images" src="assets/stain.png" alt=".">
                 Stain Removal
-                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle "></i>
                 <span>
                   <i class="fa-solid fa-indian-rupee-sign"></i>
                   500.00
@@ -225,17 +225,19 @@
           <form action="">
             <div class="name">
               <label for="fullName">Full Name</label><br>
-              <input id="fullName" type="text" placeholder="JohnDoe" required>
+              <input id="fullName" type="text" placeholder="JohnDoe" pattern="/^[a-zA-Z]+\ (?: [A-Za-z]+)*$/"
+                required>
             </div>
 
             <div class="email-phone">
               <div class="email-box">
                 <label for="emailID">Email ID</label><br>
-                <input id="emailID" type="text" placeholder="mailid@gmail.com" required>
+                <input id="emailID" type="email" placeholder="mailid@gmail.com"
+                  required>
               </div>
               <div class="phone-box">
                 <label for="phoneNumber">Phone Number</label><br>
-                <input id="phoneNumber" type="text" placeholder="000000000" required>
+                <input id="phoneNumber" type="text" placeholder="000000000" pattern="[0-9]{10}" required>
               </div>
             </div>
             <input type='submit' class="book-now-non-active" value="Book Now">

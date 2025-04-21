@@ -65,9 +65,13 @@
     font-size: clamp(1.1em, 1vw, 2em);
   }
 
+  .service-name .fa-circle{
+    font-size: clamp(0.1em, 5vw, 0.5em);
+  }
+
   .service-name span {
     margin-left: 30px;
-    color: rgba(59, 1, 168, 0.732);
+    color: rgba(54, 0, 247, 0.771);
     font-weight: 600;
   }
 
@@ -100,7 +104,7 @@
     padding: 0;
     margin-top: 4vh;
     color:
-      rgba(59, 1, 168, 0.732);
+    rgba(54, 0, 247, 0.771);
   }
 
   /*Right section*/
@@ -109,23 +113,22 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2.5vh;
+    gap: 2vh;
     border-radius: 2vw;
   }
 
   .added-items-cart {
-    flex: 1;
-    padding-top: 4vh;
+    padding-top: 3vh;
     border-radius: 2vw;
     background-color: white;
   }
 
   .added-items-cart .title {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: rgb(77, 76, 76);
-    padding-bottom: 1vh;
+    padding-bottom: 1.5vh;
   }
 
   /*Thead section*/
@@ -169,7 +172,7 @@
     color: rgb(145, 145, 145);
     display: grid;
     grid-template-columns: 0.5fr 1.8fr 1fr;
-    height: 4.3vh;
+    height: 5vh;
     border-bottom: 3px solid rgba(232, 232, 232, 0.5);
   }
 
@@ -182,7 +185,7 @@
 
 
   .empty-cart-section-active {
-    height: 25vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -295,7 +298,7 @@
   .book-now-active {
     color: white;
     font-weight: bold;
-    background-color: rgb(105, 0, 233);
+    background-color: rgba(62, 0, 247, 0.771);
     font-size: 1.2rem;
     border: none;
     border-radius: 1vw;
@@ -306,7 +309,7 @@
   .book-now-non-active {
     color: white;
     font-weight: bold;
-    background-color: rgb(166, 158, 255);
+    background-color: rgb(176, 173, 255);
     font-size: 1.2rem;
     border: none;
     border-radius: 1vw;
