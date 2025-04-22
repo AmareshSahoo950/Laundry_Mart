@@ -1,3 +1,4 @@
+import { serviceList } from "./database/services.js";
 
 const addButtons = document.querySelectorAll('.add-items-button');
 const tbody = document.querySelector('tbody');
@@ -6,7 +7,7 @@ const tbodySection = document.querySelector('.tbody-section');
 const emptyCartSection = document.querySelector('.empty-cart-section-active');
 const totalAmount = document.querySelector('.total-amount #price span');
 
-const inputTags = document.querySelectorAll('input');
+const inputTags = document.querySelectorAll('.book-now-section input');
 const bookNowButton = document.querySelector('.book-now-non-active');
 const form = document.querySelector('form')
 
@@ -14,14 +15,7 @@ const warning = document.querySelector('.warning-not-active');
 const emailSent = document.querySelector('.email-not-sent');
 
 
-let serviceList = [
-  { id: 'dry-cleaning-1', name: 'Dry Cleaning', price: 200.00 },
-  { id: 'wash-and-fold-2', name: 'Wash & Fold', price: 100.00 },
-  { id: 'ironing-3', name: 'Ironing', price: 30.00 },
-  { id: 'stain-removal-4', name: 'Stain Removal', price: 500.00 },
-  { id: 'leather-and-suede-cleaning-5', name: 'Leather & Suede Cleaning', price: 999.00 },
-  { id: 'wedding-dress-cleaning-6', name: 'Wedding Dress Cleaning', price: 2800.00 }
-]
+
 
 let cart = [];
 
@@ -152,8 +146,7 @@ function updateCart() {
 
   tbody.innerHTML = ``;
   cart.forEach(service => {
-    console.log(service);
-    
+
     const row = document.createElement("tr");
     row.innerHTML = `
     <td class="item-sno">${cart.indexOf(service) + 1}</td>

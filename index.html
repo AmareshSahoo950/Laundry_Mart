@@ -5,27 +5,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laundry Mart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style/index.css" />
+  
+    <link rel="stylesheet" href="style/index.css" />
   <link rel="stylesheet" href="style/booking-service.css" />
+  <link rel="stylesheet" href="style/quality-newsletter.css">
 </head>
 
 <body>
-  <nav>
-    <div class="logo-section">
-      <img class="logo" src="images/laundry-machine.png" alt="" />
-    </div>
-    <ul class="service-section">
-      <li>Home</li>
-      <li>Services</li>
-      <li>About Us</li>
-      <li>Contact Us</li>
-    </ul>
 
-    <div class="username">Phoenix</div>
-  </nav>
+  <header>
+
+
+    <nav>
+      <div class="logo-section">
+        <img class="logo" src="images/laundry-machine.png" alt="Logo" />
+      </div>
+      <ul class="service-section">
+        <li>Home</li>
+        <li>Services</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+
+      <div class="username">Phoenix</div>
+    </nav>
+  </header>
+
   <main>
     <section class="hero">
       <div class="left">
@@ -37,7 +47,7 @@
           convenience. Schedule a pickup and rediscover the freshness of your
           clothes today!
         </p>
-        <button id="book-service-button">Book a Service Today!</button>
+        <button id="book-service-button"><i class="fa-solid fa-store"></i>Book a Service Today!</button>
       </div>
       <div class="right">
         <img class="right-image" src="images/washing-machine.png" alt="" />
@@ -65,7 +75,6 @@
     <section class="booking-services-section">
 
       <div class="left-section">
-        <div class="service-list">
           <div class="title-section">
             <strong class="title">Our Services</strong>
             <p class="instruction">Click On The Add To Cart Button To Add The Services To Your Cart</p>
@@ -73,7 +82,8 @@
 
           <hr>
 
-          <div class="service-list">
+          <div class="service-list service-list-displayer">
+
             <div class="services">
               <p class="service-name">
                 <img class="service-images" src="assets/t-shirt.png" alt=".">
@@ -153,6 +163,7 @@
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
             </div>
+
             <div class="services">
               <p class="service-name">
                 <img class="service-images" src="assets/wedding gown.png" alt=".">
@@ -168,9 +179,11 @@
                 <i class="fa-solid fa-circle-plus"></i>
               </button>
             </div>
+
           </div>
-        </div>
+
         <hr>
+
         <p class="end-instruction">
           <i class="fa-solid fa-circle-info fa-sm"></i>
           Add the items to the cart and book now
@@ -225,15 +238,13 @@
           <form action="">
             <div class="name">
               <label for="fullName">Full Name</label><br>
-              <input id="fullName" type="text" placeholder="JohnDoe" pattern="/^[a-zA-Z]+\ (?: [A-Za-z]+)*$/"
-                required>
+              <input id="fullName" type="text" placeholder="JohnDoe" pattern="/^[a-zA-Z]+\ (?: [A-Za-z]+)*$/" required>
             </div>
 
             <div class="email-phone">
               <div class="email-box">
                 <label for="emailID">Email ID</label><br>
-                <input id="emailID" type="email" placeholder="mailid@gmail.com"
-                  required>
+                <input id="emailID" type="email" placeholder="mailid@gmail.com" required>
               </div>
               <div class="phone-box">
                 <label for="phoneNumber">Phone Number</label><br>
@@ -254,9 +265,87 @@
 
     </section>
 
+    <section class="quality-description-section">
+
+      <div class="facility-list">
+
+        <div class="facility">
+          <img src="images/washing-machine-bw.png" alt="premium service">
+          <p class="title">Premium Services</p>
+          <p class="description">Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel
+            as good as new.</p>
+        </div>
+
+        <div class="facility">
+          <img src="images/support.png" alt="Quick Support">
+          <p class="title">Quick Support</p>
+          <p class="description">We're committed to providing prompt solutions to ensure your experience is smooth and
+            worry-free</p>
+        </div>
+        <div class="facility">
+          <img src="images/pickup.png" alt="hassle free delivery">
+          <p class="title">Hassle Free Delivery</p>
+          <p class="description">Enjoy seamless service with our convenient pickup and delivery options, tailored to
+            your schedule.</p>
+        </div>
+        <div class="facility">
+          <img src="images/deal.png" alt="affordable pricing">
+          <p class="title">Affordable Prices</p>
+          <p class="description">Experience exceptional care without breaking the bank - our affordable prices make
+            laundry day stress-free.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-subscription-section">
+      <div class="left"><strong>Subscribe to our newsletter.</strong></div>
+      <div class="right">
+        <form action="">
+          <input type="text" placeholder="Full name">
+          <input type="email" placeholder="Email">
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logo-about-us">
+        <img src="images/laundry-machine.png" alt="">
+        <p class="title">About us</p>
+        <p class="description">We believe in providing the most premium service at your doorstep in an affordable price.
+        </p>
+      </div>
+      <div class="important-links">
+        <p class="title">Important Links</p>
+        <a href="#">About us</a>
+        <a href="#">Contact us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Refund Policy</a>
+      </div>
+      <div class="contact">
+        <p class="title">Contact</p>
+        <div class="description">
+          <a href="#">mail@site.com</a>
+          <p class="mobile-number">+91 89840 07855</p>
+        </div>
+      </div>
+      <div class="follow-us">
+        <p class="title">Follow Us</p>
+        <div id="social-icons">
+          <a href="#"><i class="fa-brands fa-instagram "></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter "></i></a>
+          <a href="#"><i class="fa-brands fa-youtube "></i></a>
+        </div>
+
+      </div>
+    </footer>
   </main>
+
   <script src="script/index.js"></script>
-  <script src="script/add-items.js"></script>
+  <script type="module" src="script/serviceLoader.js" defer></script>
+  <script type="module" src="script/add-items.js"></script>
 </body>
 
 </html>

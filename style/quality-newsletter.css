@@ -1,0 +1,480 @@
+@media (min-width: 768px) {
+  .quality-description-section {
+    padding: 3vh 2vw;
+  }
+
+  .facility-list {
+    padding: 4vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .facility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .facility img {
+    width: 5rem;
+  }
+
+  .facility .title {
+    font-size: clamp(1.5em, 1vw, 4em);
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+    padding: 1vh 0;
+  }
+
+  .facility .description {
+    width: 77%;
+    font-size: clamp(1em, 1vw, 4em);
+    text-align: center;
+    line-height: 3vh;
+  }
+
+  .newsletter-subscription-section {
+    background: linear-gradient(to right, rgb(0, 170, 255), rgb(18, 176, 254));
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10vh 7vw;
+  }
+
+  .left {
+    flex: 2;
+  }
+
+  .right {
+    flex: 3;
+  }
+
+  .left strong {
+    font-size: clamp(3rem, 1vw, 6rem);
+  }
+
+  .right form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2rem;
+    row-gap: 0.3em;
+  }
+
+  .right input {
+    border-radius: 0;
+    border: none;
+    padding: 2.5vh 2vw;
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    background-color: rgb(48, 186, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(233, 233, 233, 0.306);
+  }
+
+  .right input::placeholder {
+    color: rgba(255, 255, 255, 0.634);
+  }
+
+  .right input:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.491);
+  }
+
+  .right input[type="submit"] {
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    background-color: white;
+    color: rgb(0, 157, 236);
+  }
+
+  footer {
+    padding: 9vh 0 9vh 5vw;
+    background-color: rgba(232, 232, 232, 0.447);
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 1.5fr 1.5fr;
+  }
+
+  footer .title {
+    font-size: clamp(1.5em, 1vw, 3em);
+    color: rgb(38, 38, 38);
+    padding: 1.5vh 0;
+  }
+
+  footer .description {
+    font-size: clamp(1rem, 1vw, 3rem);
+    color: rgb(123, 123, 123);
+    line-height: 4vh;
+  }
+
+  footer a {
+    font-size: clamp(1.1rem, 1vw, 3rem);
+    text-decoration: none;
+    line-height: 3.5vh;
+    color: rgb(120, 120, 120);
+  }
+
+  .logo-about-us img {
+    width: 4vw;
+  }
+
+  .logo-about-us {
+    flex: 2;
+  }
+
+  .logo-about-us .description {
+    font-size: clamp(1.1rem, 1vw, 3rem);
+    width: 70%;
+  }
+
+
+  .important-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+  }
+
+  .contact {
+    flex: 1;
+  }
+
+  .contact .mobile-number {
+    font-size: clamp(1em, 1vw, 3rem);
+  }
+
+  .follow-us {
+    flex: 1;
+  }
+
+  .follow-us i {
+    font-size: clamp(1.8rem, 1vw, 3rem);
+    margin-right: 0.6vw;
+    color: rgb(66, 66, 66);
+  }
+
+}
+
+@media (min-width: 376px) and (max-width: 767px) {
+  .quality-description-section {
+    padding: 3vh 2vw;
+  }
+
+  .facility-list {
+    padding: 4vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .facility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .facility img {
+    width: 5rem;
+  }
+
+  .facility .title {
+    font-size: clamp(1.5em, 1vw, 4em);
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+    padding: 1vh 0;
+  }
+
+  .facility .description {
+    width: 77%;
+    font-size: clamp(1em, 1vw, 4em);
+    text-align: center;
+    line-height: 3vh;
+  }
+
+  .newsletter-subscription-section {
+    background: linear-gradient(to right, rgb(0, 170, 255), rgb(18, 176, 254));
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10vh 7vw;
+  }
+
+  .left {
+    flex: 2;
+  }
+
+  .right {
+    flex: 1;
+  }
+
+  .left strong {
+    font-size: clamp(3rem, 1vw, 3.5rem);
+  }
+
+  .right form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.2vw;
+    row-gap: 2vh;
+    padding-top: 4vh;
+  }
+
+  .right input {
+    border-radius: 0;
+    border: none;
+    padding: 2.5vh 2vw;
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    background-color: rgb(48, 186, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(233, 233, 233, 0.306);
+  }
+
+  .right input::placeholder {
+    color: rgba(255, 255, 255, 0.634);
+  }
+
+  .right input:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.491);
+  }
+
+  .right input[type="submit"] {
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    background-color: white;
+    color: rgb(0, 157, 236);
+  }
+
+  footer {
+    padding: 9vh 0 9vh 5vw;
+    background-color: rgba(232, 232, 232, 0.447);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2vh;
+  }
+
+  footer .title {
+    font-size: clamp(1.5em, 1vw, 3em);
+    color: rgb(38, 38, 38);
+    padding: 1.5vh 0;
+  }
+
+  footer .description {
+    font-size: clamp(1rem, 1vw, 3rem);
+    color: rgb(123, 123, 123);
+    line-height: 4vh;
+  }
+
+  footer a {
+    font-size: clamp(1.1rem, 1vw, 3rem);
+    text-decoration: none;
+    line-height: 3.5vh;
+    color: rgb(120, 120, 120);
+  }
+
+  .logo-about-us img {
+    width: 3em;
+  }
+
+  .logo-about-us {
+    flex: 2;
+  }
+
+  .logo-about-us .description {
+    font-size: clamp(1.1rem, 1vw, 3rem);
+    width: 70%;
+  }
+
+
+  .important-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+  }
+
+  .contact {
+    flex: 1;
+  }
+
+  .contact .mobile-number {
+    font-size: clamp(1em, 1vw, 3rem);
+  }
+
+  .follow-us {
+    flex: 1;
+  }
+
+  .follow-us i {
+    font-size: clamp(1.8rem, 1vw, 3rem);
+    margin-right: 0.6vw;
+    color: rgb(66, 66, 66);
+  }
+
+}
+
+@media (max-width: 376px) {
+  body {
+    width: 125vw;
+  }
+
+  .quality-description-section {
+    padding: 3vh 2vw;
+  }
+
+  .facility-list {
+    padding: 4vh 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .facility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .facility img {
+    width: 5rem;
+  }
+
+  .facility .title {
+    font-size: clamp(1.5em, 1vw, 4em);
+    font-weight: bold;
+    color: rgb(85, 85, 85);
+    padding: 1vh 0;
+  }
+
+  .facility .description {
+    width: 77%;
+    font-size: clamp(1em, 1vw, 4em);
+    text-align: center;
+    line-height: 5vh;
+  }
+
+  .newsletter-subscription-section {
+    background: linear-gradient(to right, rgb(0, 170, 255), rgb(18, 176, 254));
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10vh 7vw;
+  }
+
+  .newsletter-subscription-section .left {
+    flex: 3;
+  }
+
+  .newsletter-subscription-section .right {
+    flex: 2;
+  }
+
+  .left strong {
+    font-size: clamp(3rem, 1vw, 3.5rem);
+  }
+
+  .right form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.2rem;
+    padding-top: 4vh;
+  }
+
+  .right input {
+    border-radius: 0;
+    border: none;
+    padding: 2.5vh 2vw;
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    background-color: rgb(48, 186, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(233, 233, 233, 0.306);
+  }
+
+  .right input::placeholder {
+    color: rgba(255, 255, 255, 0.634);
+  }
+
+  .right input:focus {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.491);
+  }
+
+  .right input[type="submit"] {
+    font-size: clamp(1.3rem, 1vw, 3rem);
+    background-color: white;
+    color: rgb(0, 157, 236);
+  }
+
+  footer {
+    padding: 9vh 0 9vh 5vw;
+    background-color: rgba(232, 232, 232, 0.447);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+  }
+
+  footer .title {
+    font-size: clamp(1.5em, 1vw, 3em);
+    color: rgb(38, 38, 38);
+    padding: 1.5vh 0;
+  }
+
+  footer .description {
+    font-size: clamp(1rem, 1vw, 3rem);
+    color: rgb(123, 123, 123);
+    line-height: 4vh;
+  }
+
+  footer a {
+    font-size: clamp(1.1rem, 1vw, 3rem);
+    text-decoration: none;
+    line-height: 5vh;
+    color: rgb(120, 120, 120);
+  }
+
+  .logo-about-us img {
+    width: 4em;
+  }
+
+  .logo-about-us .description {
+    font-size: clamp(1.1rem, 1vw, 3rem);
+    width: 70%;
+    line-height: 6vh;
+  }
+
+  .important-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .contact {
+    flex: 1;
+  }
+
+  .contact .mobile-number {
+    font-size: clamp(1em, 1vw, 3rem);
+  }
+
+  .follow-us {
+    flex: 1;
+  }
+
+  .follow-us i {
+    font-size: clamp(1.8rem, 1vw, 3rem);
+    margin-right: 0.6vw;
+    color: rgb(66, 66, 66);
+  }
+
+}

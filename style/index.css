@@ -1,3 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
 /* For Desktop  */
 @media screen and (min-width: 768px) {
   * {
@@ -8,7 +16,6 @@
   }
 
   body {
-    height: 5000vh;
     background-color: rgb(251, 251, 251);
   }
 
@@ -40,7 +47,7 @@
   }
 
   .service-section {
-    flex: 1;
+    flex: 4;
     gap: 4vw;
     display: flex;
     align-items: center;
@@ -48,12 +55,13 @@
   }
 
   li {
+    font-size: clamp(1.2rem, 1vw, 3rem);
     position: relative;
     display: inline-block;
-    margin-right: 20px;
     padding-bottom: 5px;
     color: #888;
     cursor: pointer;
+    white-space: nowrap;
   }
 
   li::after {
@@ -103,19 +111,17 @@
   }
 
   .hero {
-    display: block;
     margin: 20vh 0 0 10vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 65vh;
-    gap: 100px;
+    height: 71vh;
   }
 
-  .left {
-    flex: 1;
-    max-width: 44vw;
-    margin-left: auto;
+  .right-image {
+    width: 60%;
+    position: relative;
+    left: 150px;
   }
 
   h1 {
@@ -127,7 +133,7 @@
   }
 
   p {
-    max-width: 40vw;
+    width: 100%;
     font-size: clamp(1.2rem, 1vw, 2rem);
     line-height: 4.7vh;
     color: rgb(118, 118, 118);
@@ -138,22 +144,18 @@
     color: rgb(0, 179, 255);
   }
 
-  .right {
-    flex: 1;
-  }
-
-  .right-image {
-    width: 78%;
-  }
-
   #book-service-button {
     color: white;
     background: linear-gradient(to right, rgb(34, 109, 175), rgb(47, 206, 255));
     border: none;
     border-radius: 20px;
     font-size: 1.2rem;
-    padding: 3.1vh 3vw;
+    padding: 3.1vh 3.5vw;
     cursor: pointer;
+  }
+
+  #book-service-button i {
+    padding-right: 15px;
   }
 
   .achievements-section {
@@ -210,7 +212,7 @@
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* For Tablet  */
-@media (min-width: 376px) and (max-width: 767px) {
+@media screen and  (min-width: 376px) and (max-width: 767px) {
   * {
     margin: 0;
     padding: 0;
@@ -233,6 +235,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1;
   }
 
   .logo-section {
@@ -271,12 +274,12 @@
   .hero {
     padding-top: 140px;
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
 
   .left {
-    margin-top: 65px;
-    margin-left: 50px;
+    flex: 1;
+    margin-left: 7vw;
   }
 
   h1 {
@@ -298,11 +301,8 @@
   }
 
   .right {
+    flex: 1;
     margin-left: auto;
-  }
-
-  .right-image {
-    width: 70%;
   }
 
   #book-service-button {
@@ -311,8 +311,12 @@
     border: none;
     border-radius: 20px;
     font-size: 20px;
-    padding: 25px 40px;
+    padding: 20px 50px;
     cursor: pointer;
+  }
+
+  #book-service-button i {
+    margin-right: 3vw;
   }
 
   .achievements-section {
@@ -322,8 +326,8 @@
     align-items: center;
     color: rgb(71, 71, 71);
     background-color: rgb(0, 179, 255);
-    height: 10vh;
-    font-size: 1em;
+    height: 20vh;
+    font-size: clamp(1em, 1vw, 1.4em);
   }
 
   .achievements-section .title {
@@ -348,8 +352,6 @@
     font-weight: bold;
   }
 
-
-
   .achievements:nth-child(2) {
     padding: 0px 4vw;
     border-left: 3px solid rgba(255, 255, 255, 0.248);
@@ -369,7 +371,7 @@
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* For Phone  */
-@media (max-width: 375px) {
+@media screen and (max-width: 376px) {
   * {
     margin: 0;
     padding: 0;
@@ -378,7 +380,6 @@
   }
 
   body {
-    width: 120vw;
     background-color: rgb(251, 251, 251);
   }
 
@@ -392,6 +393,7 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1;
   }
 
   .logo-section {
@@ -431,13 +433,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
 
   .left {
-    margin-top: 65px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5vw;
   }
 
   h1 {
@@ -463,7 +463,7 @@
   }
 
   .right-image {
-    width: 70%;
+    width: 80%;
   }
 
   #book-service-button {
@@ -472,8 +472,12 @@
     border: none;
     border-radius: 20px;
     font-size: 18px;
-    padding: 15px 30px;
+    padding: 18px 38px;
     cursor: pointer;
+  }
+
+  #book-service-button i {
+    margin-right: 4vw;
   }
 
   .achievements-section {
@@ -486,7 +490,7 @@
     align-items: center;
     color: rgb(71, 71, 71);
     background-color: rgb(0, 179, 255);
-    height: 16vh;
+    height: 20vh;
   }
 
   .achievements-section .title {
