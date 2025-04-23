@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Service Summary</h3>
+  <table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
+    <thead>
+      <tr>
+        <th style="padding: 8px; border: 1px solid #ccc; background-color: #f5f5f5;">Service</th>
+        <th style="padding: 8px; border: 1px solid #ccc; background-color: #f5f5f5;">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 8px; border: 1px solid #ccc;">${item.name}</td>
+        <td style="padding: 8px; border: 1px solid #ccc; text-align: left;">₹${item.price}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr />
+  <table>
+    <tbody>
+      <tr>
+        <td style="font-weight: bold; color: green; font-size: 1rem; width: 70%; padding: 8px;">Total Amount</td>
+        <td style="font-weight: bold; color: green; font-size: 1rem; width: 100%;white-space: nowrap;">₹${total}</td>
+      </tr>
+    </tbody>
+   </table>
+
+</body>
+</html>

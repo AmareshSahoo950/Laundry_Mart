@@ -14,10 +14,10 @@ const form = document.querySelector('form')
 const warning = document.querySelector('.warning-not-active');
 const emailSent = document.querySelector('.email-not-sent');
 
+export let cart = [];
 
-
-
-let cart = [];
+export let fullName = document.getElementById('fullName').value;
+export let emailID = document.getElementById('emailID').value;
 
 
 checkEmptyCart();
@@ -129,7 +129,6 @@ addButtons.forEach(btn =>
       let dummyCart = [...cart];
       cart = dummyCart.filter(ele => ele.id !== btn.id);
 
-
       btn.innerHTML = `Add Item <i class="fa-solid fa-circle-plus"></i>`
       btn.classList.add('add-items-button');
       btn.classList.remove('remove-items-button');
@@ -179,10 +178,12 @@ form.addEventListener('submit', e => {
 
 
 function resetUserInterface() {
+ const cartItems = [...cart];
+
+  console.log(cartItems);
+  
   cart = [];
-  sno = 1;
-  sum = 0;
-  totalAmount.innerText = sum;
+  totalAmount.innerText = totalAmountSetter();
   checkEmptyCart();
 
   inputTags.forEach(inp => {
@@ -196,6 +197,5 @@ function resetUserInterface() {
     e.classList.add('add-items-button');
     e.classList.remove('remove-items-button')
   })
-
 
 }
