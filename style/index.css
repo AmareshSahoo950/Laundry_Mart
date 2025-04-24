@@ -213,13 +213,8 @@
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 /* For Tablet  */
-@media screen and  (min-width: 376px) and (max-width: 767px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+@media screen and (min-width: 376px) and (max-width: 767px) {
+
 
   body {
     width: 120vw;
@@ -373,12 +368,7 @@
 
 /* For Phone  */
 @media screen and (max-width: 376px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
+
 
   body {
     background-color: rgb(251, 251, 251);
