@@ -140,7 +140,7 @@
           <form id="booking-form">
             <div class="name">
               <label for="fullName">Full Name</label><br>
-              <input id="fullName" type="text" placeholder="JohnDoe" required>
+              <input id="fullName" type="text" placeholder="John Doe" required>
             </div>
 
             <div class="email-phone">
@@ -202,12 +202,13 @@
     <section class="newsletter-subscription-section">
       <div class="left"><strong>Subscribe to our newsletter.</strong></div>
       <div class="right">
-        <form action="">
-          <input type="text" placeholder="Full name">
-          <input type="email" placeholder="Email">
+        <form id="newsletter-form">
+          <input id="fullName" type="text" placeholder="Full name">
+          <input id="emailID" type="email" placeholder="Email">
           <input type="submit" value="Subscribe">
         </form>
       </div>
+      <p class="p-non-active"><i class="fa-solid fa-circle-info fa-sm"></i>This feature is currently unavailable.</p>
     </section>
 
     <footer>
@@ -253,6 +254,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <script type="module" src="script/email.js"></script>
+  <script src="./script/newsletter.js"></script>
 
 </body>
 

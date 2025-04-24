@@ -1,14 +1,16 @@
-import { cart, fullName, emailID } from "./add-items.js";
+import { cart, getfullName, getEmailId, emailSent } from "./add-items.js";
 
 let CartArray, userName, userEmail;
 
+
 document.getElementById('send-mail-button').addEventListener('click', () => {
   CartArray = [...cart];
-  userName = fullName;
-  userEmail = emailID;
-  console.log(userName, userEmail);
 
-})
+  userName = getfullName().value.trim().split(' ');
+  userEmail = getEmailId().value.trim();
+});
+
+
 
 function generateEmailBody(cartItems) {
   let total = 0;
@@ -27,8 +29,8 @@ function generateEmailBody(cartItems) {
     <table style="border-collapse: collapse; width: 100%; font-family: Arial, sans-serif;">
       <thead>
         <tr>
-          <th style="padding: 8px; border: 1px solid #ccc; background-color: #f5f5f5;">Service</th>
-          <th style="padding: 8px; border: 1px solid #ccc; background-color: #f5f5f5;">Price</th>
+          <th style="padding: 8px; font-size: 0.9rem; border: 1px solid #ccc; background-color: #f5f5f5;">Service</th>
+          <th style="padding: 8px; font-size: 0.9rem; border: 1px solid #ccc; background-color: #f5f5f5;">Price</th>
         </tr>
       </thead>
       <tbody>
@@ -49,30 +51,36 @@ function generateEmailBody(cartItems) {
   `;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init({
-    publicKey: 'HNJvSiEifSB2hIjne'
-  });
 
-  document.getElementById('booking-form').addEventListener('submit', function (event) {
-
-    event.preventDefault();
-
-    const emailBody = generateEmailBody(CartArray);
-
-    const templateParams = {
-      to_email: "amareshsahoo441@gmail.com",
-      user_name: userName,
-      message_html: emailBody
-    };
+emailjs.init({
+  publicKey: 'HNJvSiEifSB2hIjne'
+});
 
 
-    emailjs.send('service_hpznhhj', 'template_cokmoqh', templateParams)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      }).catch((error) => {
-        console.error('FAILED...', error);
-        alert('Failed to send email. Please try again.');
-      });
-  });
+document.getElementById('booking-form').addEventListener('submit', function (event) {
+
+  event.preventDefault();
+
+  const emailBody = generateEmailBody(CartArray);
+
+  const templateParams = {
+    to_email: userEmail,
+    user_name: userName[0],
+    message_html: emailBody
+  };
+
+
+  emailjs.send('service_hpznhhj', 'template_cokmoqh', templateParams)
+    .then((response) => {
+      emailSent.classList.remove('email-not-sent');
+      emailSent.classList.add('email-sent');
+
+      setTimeout(() => {
+        emailSent.classList.remove('email-sent');
+        emailSent.classList.add('email-not-sent');
+      }, 3000);
+    }).catch(() => {
+      alert('Failed to send email. Please try again.');
+    });
+
 });

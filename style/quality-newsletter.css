@@ -42,7 +42,9 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10vh 7vw;
+    position: relative;
   }
+
 
   .left {
     flex: 2;
@@ -86,6 +88,24 @@
     font-size: clamp(1.3rem, 1vw, 3rem);
     background-color: white;
     color: rgb(0, 157, 236);
+  }
+
+  .newsletter-subscription-section .p-non-active {
+    position: absolute;
+    top: 83%;
+    left: 40%;
+    color: rgb(245, 245, 0);
+    font-size: clamp(2rem, 1vw, 2.5rem);
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+
+  .newsletter-subscription-section i {
+    margin-right: 1.3vw;
+  }
+
+  .newsletter-subscription-section .p-active {
+    opacity: 1;
   }
 
   footer {
@@ -202,6 +222,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 10vh 7vw;
+    position: relative;
   }
 
   .left {
@@ -247,6 +268,24 @@
     font-size: clamp(1.3rem, 1vw, 3rem);
     background-color: white;
     color: rgb(0, 157, 236);
+  }
+
+  .newsletter-subscription-section .p-non-active {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    color: rgb(245, 245, 0);
+    font-size: clamp(1.3rem, 1vw, 2.5rem);
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+
+  .newsletter-subscription-section i {
+    margin-right: 1.3vw;
+  }
+
+  .newsletter-subscription-section .p-active {
+    opacity: 1;
   }
 
   footer {
@@ -368,6 +407,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 10vh 7vw;
+    position: relative;
   }
 
   .newsletter-subscription-section .left {
@@ -413,6 +453,27 @@
     background-color: white;
     color: rgb(0, 157, 236);
   }
+
+  .newsletter-subscription-section .p-non-active {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    color: rgb(245, 245, 0);
+    font-size: clamp(1.2rem, 1vw, 1.7rem);
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+
+  .newsletter-subscription-section i {
+    margin-right: 1.3vw;
+  }
+
+  .newsletter-subscription-section .p-active {
+    opacity: 1;
+  }
+
 
   footer {
     padding: 9vh 0 9vh 5vw;

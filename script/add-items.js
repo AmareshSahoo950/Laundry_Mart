@@ -12,12 +12,18 @@ const bookNowButton = document.querySelector('.book-now-non-active');
 const form = document.querySelector('form')
 
 const warning = document.querySelector('.warning-not-active');
-const emailSent = document.querySelector('.email-not-sent');
+export const emailSent = document.querySelector('.email-not-sent');
 
 export let cart = [];
 
-export let fullName = document.getElementById('fullName').value;
-export let emailID = document.getElementById('emailID').value;
+export function getfullName() {
+  return document.getElementById('fullName');
+}
+
+export function getEmailId() {
+  return document.getElementById('emailID');
+}
+
 
 
 checkEmptyCart();
@@ -164,13 +170,6 @@ function updateCart() {
 form.addEventListener('submit', e => {
 
   e.preventDefault();
-  emailSent.classList.remove('email-not-sent');
-  emailSent.classList.add('email-sent');
-
-  setTimeout(() => {
-    emailSent.classList.remove('email-sent');
-    emailSent.classList.add('email-not-sent');
-  }, 3000);
 
   resetUserInterface();
   inputTagsEnabler();
@@ -178,10 +177,10 @@ form.addEventListener('submit', e => {
 
 
 function resetUserInterface() {
- const cartItems = [...cart];
+  const cartItems = [...cart];
 
   console.log(cartItems);
-  
+
   cart = [];
   totalAmount.innerText = totalAmountSetter();
   checkEmptyCart();
